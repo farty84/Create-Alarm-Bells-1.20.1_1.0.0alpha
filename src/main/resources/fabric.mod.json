@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "create-alarm-bells",
+	"version": "${version}",
+	"name": "Create: Alarm Bells",
+	"description": "A create addon allowing pre-packaged audio clip modification along with user input audio for immersion within your factory!",
+	"authors": [
+		"farty84"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/create-alarm-bells/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"createalarmbells.modid.CreateAlarmBells"
+		],
+		"client": [
+			"createalarmbells.modid.CreateAlarmBellsClient"
+		],
+		"fabric-datagen": [
+			"createalarmbells.modid.CreateAlarmBellsDataGenerator"
+		]
+	},
+	"mixins": [
+		"create-alarm-bells.mixins.json",
+		{
+			"config": "create-alarm-bells.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
